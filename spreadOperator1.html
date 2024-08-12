@@ -1,0 +1,21 @@
+<script>
+    // problem 
+    var car1 = ["Audi","BMW","Honda"];
+    var car2 = car1;
+    document.write("car1 : "+car1);
+    document.write("<br>car2 : "+car2);
+    car2[1] = "Nano";
+    document.write("<br>car1 : "+car1);
+    document.write("<br>car2 : "+car2);
+    
+    // solution -- spread operator
+
+    var car1 = ["Audi","BMW","Honda"];
+    var car2 = [...car1];
+    document.write("<br><br>car1 : "+car1);
+    document.write("<br>car2 : "+car2);
+    car2[1] = "Nano";
+    document.write("<br>car1 : "+car1);
+    document.write("<br>car2 : "+car2);
+    
+</script>

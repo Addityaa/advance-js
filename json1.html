@@ -1,0 +1,38 @@
+<script>
+    // javascript object
+    var obj = {
+        fname: "andrew",
+        lname :"anderson",
+        salary : 45678
+    }
+    document.write("typeof obj : "+typeof obj);
+    document.write("<br>first name : "+obj.fname);
+    document.write("<br>last name : "+obj.lname);
+    document.write("<br>salary : "+obj.salary);
+    var objString = JSON.stringify(obj);
+    document.write("<br>typeof objString : "+typeof objString);
+    
+    // json object
+    var obj1 = {
+        "fname": "andrew",
+        "lname" :"anderson",
+        "salary" : 45678
+    }
+    document.write("<br><br>typeof obj : "+typeof obj1);
+    document.write("<br>first name : "+obj1.fname);
+    document.write("<br>last name : "+obj1.lname);
+    document.write("<br>salary : "+obj1.salary);
+
+    // json string
+    var obj2 = `{
+        "fname": "andrew",
+        "lname" :"anderson",
+        "salary" : 45678
+    }`
+    document.write("<br><br>typeof obj : "+typeof obj2);
+    var objData = JSON.parse(obj2);
+    document.write("<br>first name : "+objData.fname);
+    document.write("<br>last name : "+objData.lname);
+    document.write("<br>salary : "+objData.salary);
+
+</script>

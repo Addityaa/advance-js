@@ -1,0 +1,21 @@
+
+<script>
+    var obj = new Object();
+    console.log("typeof obj : ",typeof obj);
+    obj.fname = "andrew anderson";
+    obj.age = 45;
+    obj.address = "indore";
+    console.log("obj : "+obj);
+    console.log("obj : ",obj);
+    console.log("typeof fname : "+typeof obj.fname);
+    
+    for(var index in obj){
+        console.log("key : "+index+" value : "+obj[index]);
+    }
+    delete obj.age;
+
+    for(var index in obj){
+        console.log("key : "+index+" value : "+obj[index]);
+    }
+
+</script>

@@ -1,0 +1,24 @@
+<script>
+var obj1 = {
+    name : "product1",
+    price : 4555
+}    
+var obj2 = {
+    name : "product2",
+    price : 3555
+}    
+var obj3 = {
+    name : "product3",
+    price : 44555
+}    
+
+var arr = [obj1,obj2,obj3]
+
+for(var obj of arr){
+    for(var key in obj){
+        document.write(key+" : "+obj[key]+"<br>");        
+    }
+    document.write("<br>");
+}
+
+</script>

@@ -1,0 +1,28 @@
+<script>
+    // spread operator in case of object
+
+    var obj1 = {
+            name:"Andrew anderson",
+            age : 45
+    }
+    var obj2 = {
+            address : "Indore",
+            pincode:345678
+    }
+    var obj = {...obj1,...obj2};
+    // object destructuring
+    var {name,pincode,age,address} = obj;
+    document.write("<br>name : "+name);
+    document.write("<br>pincode : "+pincode);
+    document.write("<br>age : "+age);
+    document.write("<br>address : "+address);
+
+    var {name,pincode,...a} = obj;
+    // here a is rest parameter
+    document.write("<br><br>name : "+name);
+    document.write("<br>pincode : "+pincode);
+    
+    console.log(a);
+    
+    
+</script>

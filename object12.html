@@ -1,0 +1,99 @@
+<script>
+var arr = [
+{
+    name : {
+        first_name : "Andrew",
+        last_name : "Anderson"
+    },
+    age : 45,
+    salary : {
+        total_salary : {
+            gross_salary : 56789,
+            pfStatus : {
+                pfNo : "pf123456",
+                pfPassword : "abc"
+            }
+        }
+    },
+    address : {
+        country : "India",
+        state : "Madhya Pradesh",
+        colony : {
+            Apartment_no : 234,
+            Apartment_name : "Shalimar Banglow"
+        }
+    }
+},{
+    name : {
+        first_name : "Mathew",
+        last_name : "Anderson"
+    },
+    age : 45,
+    salary : {
+        total_salary : {
+            gross_salary : 56789,
+            pfStatus : {
+                pfNo : "pf123456",
+                pfPassword : "abc"
+            }
+        }
+    },
+    address : {
+        country : "India",
+        state : "Madhya Pradesh",
+        colony : {
+            Apartment_no : 234,
+            Apartment_name : "Shalimar Banglow"
+        }
+    }
+},{
+    name : {
+        first_name : "Simon",
+        last_name : "Anderson"
+    },
+    age : 45,
+    salary : {
+        total_salary : {
+            gross_salary : 56789,
+            pfStatus : {
+                pfNo : "pf123456",
+                pfPassword : "abc"
+            }
+        }
+    },
+    address : {
+        country : "India",
+        state : "Madhya Pradesh",
+        colony : {
+            Apartment_no : 234,
+            Apartment_name : "Shalimar Banglow"
+        }
+    }
+}
+]
+
+for(var obj of arr){
+    for(var key in obj){
+    if(typeof obj[key]=="object"){
+        for(var subkey in obj[key]){
+            if(typeof obj[key][subkey]=="object"){
+                for(var innerkey in obj[key][subkey]){
+                    if(typeof obj[key][subkey][innerkey] == "object"){
+                        for(var subinnerkey in obj[key][subkey][innerkey]){
+                            if(typeof obj[key][subkey][innerkey][subinnerkey] == "object"){
+                                /*        */
+                            }else
+                                document.write(subinnerkey+" : "+obj[key][subkey][innerkey][subinnerkey]+"<br>");
+                        }    
+                    }else
+                        document.write(innerkey+" : "+obj[key][subkey][innerkey]+"<br>");
+                }
+            }else
+                document.write(subkey+" : "+obj[key][subkey]+"<br>");
+        }
+    }else
+        document.write(key+" : "+obj[key]+"<br>");
+}
+document.write("<br>");
+}
+</script>

@@ -1,0 +1,32 @@
+<button onclick="showData()">Click To View Data</button>
+<div id="show"></div>
+
+<script>
+function showData(){
+    var obj1 = {
+    name : "product1",
+    price : 4555
+}    
+var obj2 = {
+    name : "product2",
+    price : 3555
+}    
+var obj3 = {
+    name : "product3",
+    price : 44555
+}    
+
+var arr = [obj1,obj2,obj3]
+var table = "<table border='1' cellspacing='0' cellpadding='6'><tr><th>Name</th><th>Price</th></tr>";
+for(var obj of arr){
+    table+="<tr>";
+        for(var index in obj){
+            table+="<td>"+obj[index]+"</td>";
+        }
+    table+="</tr>";            
+}
+table+="</table>";
+document.getElementById("show").innerHTML=table;
+}
+
+</script>

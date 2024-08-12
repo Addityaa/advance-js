@@ -1,0 +1,32 @@
+<script>
+var obj = {
+    name : "Andrew Anderson",
+    age : 45,
+    salary : 5689,
+    address : {
+        country : "India",
+        state : "Madhya Pradesh",
+        colony : {
+            Apartment_no : 234,
+            Apartment_name : "Shalimar Banglow"
+        }
+    }
+}
+
+for(var key in obj){
+    if(typeof obj[key]=="object"){
+        for(var subkey in obj[key]){
+            if(typeof obj[key][subkey]=="object"){
+                for(var innerkey in obj[key][subkey]){
+                    if(typeof obj[key][subkey][innerkey] == "object"){
+                        /*         */    
+                    }else
+                        document.write(innerkey+" : "+obj[key][subkey][innerkey]+"<br>");
+                }
+            }else
+                document.write(subkey+" : "+obj[key][subkey]+"<br>");
+        }
+    }else
+        document.write(key+" : "+obj[key]+"<br>");
+}
+</script>

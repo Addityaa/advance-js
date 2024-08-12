@@ -1,0 +1,35 @@
+<script>
+     var a=[];
+     var row=3,col=3;
+    var count = 0;
+    let status=true;
+     for(var i = 0 ; i < row ; i++){
+        a[i]=[];
+        for(var j = 0 ; j < col ; j++){
+          a[i][j] = ++count;
+        }
+     }
+
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            document.write(a[i][j]+"  ");
+        }
+        document.write("<br>");
+    }     
+    thisloop:
+     for(var i = 0 ; i < row ; i++){
+        for(var j = 0 ; j < col ; j++){
+          if(i==j && a[i][j]==1)
+            continue;
+          else if(a[i][j]==0)
+            continue;
+          else{
+            document.write("not a unit matrix <br>");
+            status=false;
+            break thisloop;
+          }
+        }
+     }
+     if(status)
+        document.write("unit matrix");
+</script>

@@ -1,0 +1,24 @@
+
+<script>
+  function Employee(){
+    this["full name"] = "Anrew Anderson"
+    this.address = {
+        country : "India",
+        state : "Mp",
+        city : {
+            city_name : "Indore"
+        }
+    }
+    this.show = function(){
+        //console.log("inside function age : ",this.age);
+        // console.log("Hello "+this["full name"]+" your address is "+this.address.city.city_name+" , "+this.address.state+" , "+this.address.country);
+        console.log(`Hello ${this["full name"]} your address is ${this.address.city.city_name}, ${this.address.state} , ${this.address.country}`);
+    }
+    }
+  const emp = new Employee();
+  Employee.prototype.age = 56;
+  //emp.age = 56;  
+  console.log("full name : ",emp["full name"]);
+  console.log("age : ",emp.age);
+  emp.show();  
+</script>

@@ -1,0 +1,14 @@
+<script>
+    // array destructuring
+
+    var car1 = ["Audi","BMW","Honda","alto","maruti"];
+    var [car11,car22,...cars] = car1;
+    // here ...cars is a rest parameter
+    document.write("<br>car11 : "+car11);
+    document.write("<br>car22 : "+car22);
+    document.write("<br>cars : "+cars);
+    
+    const name = "Andrew";
+    const ch = [...name]; // here we use spread operator
+    document.write("<br>ch : ",ch);
+</script>

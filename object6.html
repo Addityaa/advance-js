@@ -1,0 +1,30 @@
+<script>
+    
+var objz ={
+    student_name :"nonu",
+    "roll no" : 230005,
+    section : "D",
+    address: {
+        address1 : " indore",
+        address2: "bhopal",
+    },
+
+    "student id ": "s12",
+};
+
+for(var key in objz){
+    if(objz[key]=="object"){
+        for(var subkey in objz[key]){
+            if(objz[key][subkey]=="object"){
+                doument.write(`${objz[key][subkey]}<br>`);
+            }else{
+                doument.write(`${objz[key][subkey]}<br>`);
+            }
+        }
+    }else{
+        document.write(`${objz[key]}<br>`);
+    }
+}
+
+
+</script>

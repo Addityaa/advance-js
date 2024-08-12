@@ -1,0 +1,52 @@
+<button onclick="show()">click me</button>
+<div id="show"></div>
+<script>
+    function show(){
+
+     var obj = {
+  "id": 3,
+  "name": "Clementine Bauch",
+  "username": "Samantha",
+  "email": "Nathan@yesenia.net",
+  "address": {
+    "street": "Douglas Extension",
+    "suite": "Suite 847",
+    "city": "McKenziehaven",
+    "zipcode": "59590-4157",
+    "geo": {
+      "lat": "-68.6102",
+      "lng": "-47.0653"
+    }
+  },
+}
+var arr=[obj];
+    var table = "<table border='1' ><tr><th>id</th><th>name</th><th>username</th><th>email</th><th>street</th><th>suite</th><th>city</th><th>zipcode</th><th>lat</th><th>lng</th></tr> ";
+ 
+    for(var subkey of arr)
+    { table += "<tr>"
+        for(var key in obj){
+          if(typeof obj[key] == "object"){
+            for(var index in obj[key]){
+                if(typeof obj[key][index]=="object"){
+                    for(var inner in obj[key][index]){
+                        if(typeof obj[key][index][inner]=="object"){
+                            for(var sub in obj[key][index][inner]){
+                                 table= table+"<td>"+obj[key][index][inner][sub]+"</td>"
+                            }
+                        }else{
+                        table= table+"<td>"+obj[key][index][inner]+"</td>"}
+                    }
+                }else{
+                table= table+"<td>"+obj[key][index]+"</td>"
+                }
+            }
+          }else{
+       table= table+"<td>"+obj[key]+"</td>"}
+        }
+   table += "</tr>"
+    }
+       
+        table+="</table>";
+        document.getElementById("show").innerHTML=table;
+    }
+</script>

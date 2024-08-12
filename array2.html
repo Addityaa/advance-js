@@ -1,0 +1,30 @@
+<script>
+    var arr = [11,22,33,44,55,66];
+    document.write("Array elements are : "+arr);
+
+    document.write("<br>");
+    var result = arr.map((element)=>{
+        return element;
+    });
+    document.write("Array elements are : "+result);
+
+    document.write("<br>");
+    var result = arr.find((element)=>{
+        return element==55;
+    });
+    document.write("Array elements are : "+result);
+
+    document.write("<br>");
+    var result = arr.filter((element)=>{
+        return element==44;
+    });
+    document.write("Array elements are : "+result);
+
+    document.write("<br>");
+    var result = arr.reduce((element,x)=>{
+        document.write("element : "+element+" x : "+x+"<br>");
+        return element+x;
+    });
+    document.write("Sum : "+result);
+    
+</script>

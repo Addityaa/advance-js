@@ -1,0 +1,33 @@
+<!-- 
+    Object in javascript : 
+    1. OBJECT IS A REAL WORLD ENTITY
+    2. Object may have properties and functionalities.
+    3. There are two ways to define object
+        a. by object literal
+           const obj = {
+            key : value
+           };
+        b. by object constructor
+           const obj = new Object();
+           obj.key = value;
+    -->
+<script>
+    var obj = {};
+    console.log("typeof obj : ",typeof obj);
+    obj.fname = "andrew anderson";
+    obj.age = 45;
+    obj.address = "indore";
+    console.log("obj : "+obj);//defalut string rep.
+    console.log("obj : ",obj);
+    console.log("typeof fname : "+typeof obj.fname);
+    
+    for(var index in obj){
+        console.log("key : "+index+" value : "+obj[index]);
+    }
+    delete obj.age;
+
+    for(var index in obj){
+        console.log("key : "+index+" value : "+obj[index]);
+    }
+
+</script>
